@@ -1,0 +1,248 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background: rgb(235, 101, 235);
+    color: black;
+}
+
+#header{
+    
+}
+
+.container{
+    padding: 10px 10%;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#logo{
+  color: black;
+  background-color: rgb(247, 183, 247);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(187, 14, 187);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul li a:hover{
+    background-color: rgb(240, 134, 240);
+    cursor: pointer;
+
+}
+
+#Home{
+    margin-top: 15%;
+}
+
+@keyframes wave{
+    0%{transform: rotate(0deg);}
+    10%{transform: rotate(14deg);}
+    20%{transform: rotate(-8deg);}
+    30%{transform: rotate(14deg);}
+    40%{transform: rotate(-4deg);}
+    50%{transform: rotate(10deg);}
+    60%{transform: rotate(0deg);}
+    100%{transform: rotate(0deg);}
+    
+}
+
+.wave{
+    display: inline-block;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+    font-size: 30px;
+}
+
+#myProfile{
+    border-radius: 50%;
+    width: 250px;
+    margin-left: 30px;
+    
+    
+}
+
+#Home{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+#CV{
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+#About{
+    padding: 80px 0;
+}
+
+
+
+
+
+#AboutMe{
+    text-align: center;
+    background-color:rgb(247, 183, 247);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+    
+
+#myText{
+    padding: 10px;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: left;
+}
+
+th, td {
+    border: 3px solid black;
+    padding: 8px;
+  }
+
+  th {
+    background-color:rgb(247, 183, 247) ;
+    
+  }
+
+  .SkillLogos{
+    display: flex;
+    justify-content: center;
+  }
+
+  #myProjects{
+    text-align: center;
+    background-color:rgb(247, 183, 247);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #Projects{
+    padding: 30px 0;
+  }
+
+  .project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+
+  .project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+  }
+
+  .layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgb(201, 39, 201));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+  }
+
+  .layer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .layer a{
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    
+  }
+
+  .project:hover img{
+    transform: scale(1.1);
+  }
+
+  .project:hover .layer{
+    height: 100%;
+  }
+
+  #MyContacts{
+    text-align: center;
+    background-color:rgb(247, 183, 247);
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+
+  #Contacts{
+    display: flex;
+    justify-content: center;
+  }
+
+  #Contacts a{
+    padding: 10px;
+  }
+
+  #Contacts a:hover{
+    transform: scale(1.1);
+  }
+
+
+  
