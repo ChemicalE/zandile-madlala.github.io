@@ -24,6 +24,11 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 1;
+    background-color: rgba(128, 0, 128, 0.7);
 }
 
 #logo{
