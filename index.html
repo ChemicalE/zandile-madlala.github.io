@@ -164,5 +164,42 @@
     <footer>
         <p style="background-color: gray; color: white; text-align: center; padding: 5px;">&copy; 2024 Zandile Madlala. All rights reserved.</p>
     </footer>
+    <script>
+      document.querySelectorAll('nav a').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+
+              smoothScrollTo(targetElement);
+          });
+      });
+
+      function smoothScrollTo(target) {
+          const duration = 2000; // Duration of the scroll in milliseconds
+          const start = window.pageYOffset;
+          const targetPosition = target.getBoundingClientRect().top;
+          const startTime = performance.now();
+
+          function scroll() {
+              const currentTime = performance.now();
+              const timeElapsed = currentTime - startTime;
+              const progress = Math.min(timeElapsed / duration, 1);
+
+              window.scrollTo(0, easeInOutQuad(progress) * targetPosition + start);
+
+              if (timeElapsed < duration) {
+                  requestAnimationFrame(scroll);
+              }
+          }
+
+          function easeInOutQuad(t) {
+              return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+          }
+
+          requestAnimationFrame(scroll);
+      }
+  </script>
   </body>
 </html>
